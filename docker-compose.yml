@@ -1,0 +1,41 @@
+services:
+  # 1. Backend API Service (Express)
+  backend:
+    build: ./backend
+    container_name: ckaiii-backend
+    restart: unless-stopped
+    networks:
+      - ckaiii-net
+
+  # 2. Web Server (Nginx)
+  nginx:
+    build: ./nginx
+    container_name: ckaiii-website
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html:ro
+    networks:
+      - ckaiii-net
+    depends_on:
+      - backend
+
+  # 3. Cloudflare Tunnel
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    environment:
+      - CLOUDFLARE_TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    networks:
+      - ckaiii-net
+    depends_on:
+      - nginx
+    stdin_open: true
+    tty: true
+
+networks:
+  ckaiii-net:
+    external: true
