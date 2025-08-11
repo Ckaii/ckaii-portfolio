@@ -9,13 +9,13 @@ services:
 
   # 2. Web Server (Nginx)
   nginx:
-    build: ./nginx
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
     container_name: nginx
     restart: unless-stopped
     ports:
       - "80:80"
-    volumes:
-      - ./frontend/dist:/usr/share/nginx/html:ro
     networks:
       - ckaiii-net
     depends_on:
@@ -32,7 +32,7 @@ services:
     networks:
       - ckaiii-net
     depends_on:
-      - nginx 
+      - nginx
     stdin_open: true
     tty: true
 
