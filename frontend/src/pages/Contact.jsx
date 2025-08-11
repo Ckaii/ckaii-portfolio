@@ -27,7 +27,7 @@ const Contact = () => {
       <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.1s' }}>
         <h2 className="text-lg font-medium">Contact</h2>
         <p className="text-neutral-300">
-          I'm always interested in hearing about new opportunities and exciting projects. 
+          I'm always interested in hearing about new opportunities and exciting projects.
           Whether you have a question or just want to say hi, feel free to reach out.
         </p>
       </div>
@@ -36,19 +36,12 @@ const Contact = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <h3 className="text-lg font-medium">Get in Touch</h3>
-          
+
           <div className="space-y-4">
             <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <div className="text-neutral-400 mb-1">Email</div>
               <a href="mailto:tanwenkai.work@gmail.com" className="text-neutral-300 hover:underline">
                 tanwenkai.work@gmail.com
-              </a>
-            </div>
-
-            <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="text-neutral-400 mb-1">Phone</div>
-              <a href="tel:+60182373221" className="text-neutral-300 hover:underline">
-                +60 18-2373221
               </a>
             </div>
 
@@ -71,7 +64,7 @@ const Contact = () => {
         {/* Contact Form */}
         <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.7s' }}>
           <h3 className="text-lg font-medium">Send a Message</h3>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="animate-slide-up" style={{ animationDelay: '0.8s' }}>
               <label htmlFor="name" className="block text-neutral-400 mb-2">
@@ -142,10 +135,10 @@ const Contact = () => {
                 type="submit"
                 className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 hover:transform hover:scale-105"
               >
-            Send Message
-          </button>
+                Send Message
+              </button>
             </div>
-        </form>
+          </form>
         </div>
       </div>
 
@@ -154,7 +147,7 @@ const Contact = () => {
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Availability</h3>
           <p className="text-neutral-300">
-            I'm currently available for new projects and collaborations. 
+            I'm currently available for new projects and collaborations.
             I typically respond to emails within 24 hours.
           </p>
           <p className="text-neutral-300">

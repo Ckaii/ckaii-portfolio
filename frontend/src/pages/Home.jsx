@@ -1,45 +1,41 @@
 const Home = () => {
   return (
-    <div className="max-w-4xl space-y-6 md:space-y-8 fade-in">
-      {/* Personal Bio */}
-      <div className="space-y-4 md:space-y-6">
-        <p className="text-base-mono md:text-lg-mono leading-relaxed">
-          I'm Kai, a Full-Stack Developer with over a decade of experience working with early-stage startups and established companies. I thrive in the early stages of company and product development, collaborating closely with founders to take companies from 0 → 1 and successfully launch their products into the world.
+    <div className="space-y-12 fade-in leading-relaxed max-w-3xl mx-auto px-6">
+      {/* Info Section */}
+      <section className="space-y-8">
+        <h2 className="text-2xl font-semibold tracking-tight">Info</h2>
+        <p className="text-lg text-gray-300 whitespace-pre-line">
+          {"I'm Kai, a Full-Stack Developer and Computer Science student at Monash University Malaysia, passionate about building scalable, user-focused web and mobile applications. My work spans frontend, backend, mobile, and DevOps, with hands-on experience taking projects from concept to production.\n\nI’ve worked on real-world applications like Stayfur, a pet-friendly accommodation booking platform with live users, and a deepfake detection web app. I enjoy solving complex problems with clean, efficient code, and I’m constantly exploring new technologies to deliver better user experiences.\n\nWhether it’s developing cross-platform mobile apps, optimizing cloud deployments, or integrating AI into products, I thrive in collaborative environments where I can contribute to both the technical foundation and the end-user experience."}
         </p>
-        
-        <p className="text-base-mono md:text-lg-mono leading-relaxed">
-          A firm believer in "skin in the game," I now partner with founders and startups seeking a more permanent arrangement in the form of equity or revenue share, where the initial cost is offset in favour of a long-term partnership with vested interests in success.
-        </p>
-        
-        <p className="text-base-mono md:text-lg-mono leading-relaxed">
-          Whether you're interested in this approach or prefer a more traditional partnership, feel free to reach out via email or social media.
-        </p>
-      </div>
+      </section>
 
-      {/* Selected Clients */}
-      <div className="space-y-3 md:space-y-4">
-        <h3 className="text-lg-mono md:text-xl-mono font-medium">Selected Clients</h3>
-        <p className="text-sm-mono md:text-base-mono">
-          Mastercard, The Bank of London, Scan.com, Labour, Cosmos, NHS, SOMO, Portal Gaming, Avallen, Alyssa Kapito, Honey & Jam, Rinkl.
+      {/* Selected Projects */}
+      <section className="space-y-6">
+        <h3 className="font-semibold text-xl tracking-tight">Selected Projects</h3>
+        <p className="text-lg text-gray-300 whitespace-pre-line">
+          {"Stayfur Web & Mobile App, Deepfake Detection Platform,\nPersonal Portfolio (Self-hosted with Docker & Nginx)."}
         </p>
-      </div>
+      </section>
 
       {/* Availability */}
-      <div className="space-y-3 md:space-y-4">
-        <p className="text-sm-mono md:text-base-mono">
-          Available for new projects from Q1 2025.
-          </p>
-        </div>
+      <section className="space-y-4">
+        <p className="text-lg text-gray-300">
+          Available for internships and freelance projects from <span className="font-medium">Q4 2025</span>.
+        </p>
+      </section>
 
       {/* Call to Action */}
-      <div className="pt-6 md:pt-8 border-t border-gray-800">
-        <p className="text-sm-mono md:text-base-mono">
-          Let's build something amazing together. 
-          <a href="/contact" className="hover-underline ml-2">
+      <section className="pt-10 border-t border-gray-700">
+        <p className="text-lg">
+          Let’s create impactful software together.
+          <a
+            href="/contact"
+            className="hover:underline ml-2 text-indigo-400 font-medium"
+          >
             Get in touch →
           </a>
         </p>
-      </div>
+      </section>
     </div>
   );
 };

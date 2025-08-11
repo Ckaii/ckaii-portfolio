@@ -20,6 +20,9 @@ body {
   overflow-x: hidden;
 }
 
+/* Suppress outlines for specific elements when needed */
+.no-focus-outline:focus { outline: none !important; box-shadow: none !important; }
+
 /* Light theme overrides */
 body.light-theme {
   background-color: #ffffff;
@@ -68,7 +71,7 @@ body.light-theme {
   color: #ffffff;
 }
 
-/* Focus styles */
+/* Focus styles (generic) */
 *:focus {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
@@ -400,11 +403,37 @@ input:focus, textarea:focus {
     background: black;
     border-bottom: 1px solid #333;
     z-index: 50;
-}
+  }
 
   .light-theme .mobile-menu {
     background: white;
     border-bottom: 1px solid #ccc;
+  }
+  
+  /* Ensure proper bottom spacing for mobile content */
+  .pb-24 {
+    padding-bottom: 8rem; /* Increased from 6rem to prevent moon overlap */
+  }
+  
+  /* Additional mobile spacing for main content */
+  .pt-24 {
+    padding-top: 6rem; /* Reduced top padding on mobile */
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .pb-24 {
+    padding-bottom: 10rem; /* Even more bottom spacing for very small screens */
+  }
+  
+  .pt-24 {
+    padding-top: 5rem; /* Further reduced top padding */
+  }
+  
+  /* Ensure text doesn't get too close to moon */
+  .grid {
+    gap: 1.5rem; /* Reduced gap on very small screens */
   }
 }
 

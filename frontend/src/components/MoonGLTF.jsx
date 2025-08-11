@@ -8,14 +8,28 @@ Title: moon
 
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import moonUrl from '../assets/moon(2).glb?url'
 
-export default function MoonGLTF({ url = moonUrl, ...props }) {
+// Smart asset URL resolver - uses assets for dev, public for production
+const getAssetUrl = (path) => {
+  if (import.meta.env.DEV) {
+    // Development: use assets directory
+    return path.startsWith('/') ? path.substring(1) : path;
+  } else {
+    // Production: use public directory
+    return path.startsWith('/') ? path : `/${path}`;
+  }
+};
+
+export default function MoonGLTF({ url = getAssetUrl('moon(2).glb'), isMobile = false, ...props }) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF(url)
   useAnimations(animations, group)
+  
+  // Apply mobile scaling if needed
+  const mobileProps = isMobile ? { scale: 0.8 } : {};
+  
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...mobileProps} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group
