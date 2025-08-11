@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# CKAI Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, minimalist portfolio website inspired by the KPRKR design aesthetic. Built with React, Vite, and Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Modern Design**: Clean, minimalist design with a dark theme and monospace typography
+- **Responsive Layout**: Two-column layout with navigation and main content areas
+- **Interactive Elements**: Hover effects, smooth transitions, and focus states
+- **Settings Panel**: Theme switching, font size adjustment, and focus mode
+- **Real-time Clock**: Live time display in the navigation
+- **Contact Form**: Functional contact form with validation
+- **Blog Section**: Thoughts and articles section with newsletter signup
 
-### `npm start`
+## Design Inspiration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This website is inspired by the [KPRKR website](https://www.kprkr.co/), featuring:
+- Monospace font (JetBrains Mono)
+- Dark theme with high contrast
+- Minimalist navigation with numbered items
+- Clean typography and spacing
+- Professional, developer-focused aesthetic
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pages
 
-### `npm test`
+1. **Info** (Home) - Personal introduction and selected clients
+2. **Work** (About) - Work experience, skills, and education
+3. **Ventures** (Projects) - Portfolio of projects and ventures
+4. **Playground** (Contact) - Contact information and form
+5. **Thoughts** - Blog posts and articles
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React 19** - Frontend framework
+- **Vite** - Build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **JetBrains Mono** - Monospace font
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Customization
 
-### `npm run eject`
+### Personal Information
+Update the following files with your information:
+- `src/pages/Home.jsx` - Personal bio and selected clients
+- `src/pages/About.jsx` - Work experience and skills
+- `src/pages/Project.jsx` - Project portfolio
+- `src/components/Navbar.jsx` - Location, social links, and contact info
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Styling
+- Modify `src/index.css` for global styles and typography
+- Update Tailwind classes in components for layout and spacing
+- Customize the color scheme by modifying the CSS variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Content
+- Add your own projects to the Projects page
+- Write blog posts for the Thoughts page
+- Update contact information and social links
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Build for Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+The built files will be in the `dist` directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License - feel free to use this template for your own portfolio!
